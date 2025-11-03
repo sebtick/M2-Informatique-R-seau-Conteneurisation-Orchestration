@@ -1,0 +1,7 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: front-config
+  namespace: workshop
+data:
+  BANNER_TEXT: "Hello M2 IR"

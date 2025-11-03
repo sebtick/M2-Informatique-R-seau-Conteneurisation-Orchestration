@@ -1,0 +1,29 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: front
+  namespace: workshop
+  labels:
+    app: front
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: front
+  template:
+    metadata:
+      labels:
+        app: front
+    spec:
+      containers:
+        - name: front
+          image: ghcr.io/nginxdemos/hello:plain-text
+          env:
+            - name: BANNER_TEXT
+              valueFrom:
+                configMapKeyRef:
+                  name: front-config
+                  key: BANNER_TEXT
+          ports:
+            - name: http
+              containerPort: 80

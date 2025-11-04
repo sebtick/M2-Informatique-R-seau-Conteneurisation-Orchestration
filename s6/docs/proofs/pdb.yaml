@@ -1,0 +1,30 @@
+apiVersion: policy/v1
+kind: PodDisruptionBudget
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"policy/v1","kind":"PodDisruptionBudget","metadata":{"annotations":{},"name":"api-pdb","namespace":"workshop"},"spec":{"minAvailable":2,"selector":{"matchLabels":{"app":"api"}}}}
+  creationTimestamp: "2025-11-04T13:08:39Z"
+  generation: 1
+  name: api-pdb
+  namespace: workshop
+  resourceVersion: "41626"
+  uid: c3873b13-e2eb-4191-88a7-034a9e88e7b2
+spec:
+  minAvailable: 2
+  selector:
+    matchLabels:
+      app: api
+status:
+  conditions:
+  - lastTransitionTime: "2025-11-04T14:06:39Z"
+    message: ""
+    observedGeneration: 1
+    reason: InsufficientPods
+    status: "False"
+    type: DisruptionAllowed
+  currentHealthy: 2
+  desiredHealthy: 2
+  disruptionsAllowed: 0
+  expectedPods: 2
+  observedGeneration: 1

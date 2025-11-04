@@ -1,0 +1,40 @@
+15m         Normal    SuccessfulDelete         replicaset/api-8dd85bb88          Deleted pod: api-8dd85bb88-qvkvl
+15m         Normal    Killing                  pod/api-8dd85bb88-vsjgp           Stopping container api
+15m         Normal    SuccessfulCreate         replicaset/api-8546687bff         Created pod: api-8546687bff-5x7p2
+15m         Normal    Created                  pod/api-8546687bff-5x7p2          Created container api
+15m         Normal    Started                  pod/api-8546687bff-5x7p2          Started container api
+15m         Normal    Pulled                   pod/api-8546687bff-5x7p2          Successfully pulled image "kennethreitz/httpbin:latest" in 1.246s (1.246s including waiting). Image size: 214174220 bytes.
+15m         Normal    SuccessfulCreate         replicaset/api-5f47c4696b         Created pod: api-5f47c4696b-sxqjl
+15m         Normal    Pulling                  pod/api-5f47c4696b-sxqjl          Pulling image "kennethreitz/httpbin:latest"
+15m         Normal    Started                  pod/api-5f47c4696b-sxqjl          Started container api
+15m         Normal    Pulled                   pod/api-5f47c4696b-sxqjl          Successfully pulled image "kennethreitz/httpbin:latest" in 804ms (804ms including waiting). Image size: 214174220 bytes.
+15m         Normal    Created                  pod/api-5f47c4696b-sxqjl          Created container api
+14m         Normal    SuccessfulDelete         replicaset/api-8546687bff         Deleted pod: api-8546687bff-5x7p2
+14m         Normal    Killing                  pod/api-8546687bff-5x7p2          Stopping container api
+14m         Normal    SuccessfulCreate         replicaset/api-5f47c4696b         Created pod: api-5f47c4696b-v2z8m
+14m         Normal    Pulling                  pod/api-5f47c4696b-v2z8m          Pulling image "kennethreitz/httpbin:latest"
+14m         Normal    SuccessfulDelete         replicaset/api-8546687bff         Deleted pod: api-8546687bff-lqzwc
+14m         Normal    Killing                  pod/api-8546687bff-lqzwc          Stopping container api
+14m         Normal    SuccessfulCreate         replicaset/api-5f47c4696b         Created pod: api-5f47c4696b-xgwk6
+14m         Normal    Pulling                  pod/api-5f47c4696b-xgwk6          Pulling image "kennethreitz/httpbin:latest"
+14m         Normal    Pulled                   pod/api-5f47c4696b-xgwk6          Successfully pulled image "kennethreitz/httpbin:latest" in 784ms (784ms including waiting). Image size: 214174220 bytes.
+14m         Normal    Created                  pod/api-5f47c4696b-xgwk6          Created container api
+14m         Normal    Started                  pod/api-5f47c4696b-xgwk6          Started container api
+14m         Normal    Pulled                   pod/api-5f47c4696b-v2z8m          Successfully pulled image "kennethreitz/httpbin:latest" in 802ms (1.572s including waiting). Image size: 214174220 bytes.
+14m         Normal    Created                  pod/api-5f47c4696b-v2z8m          Created container api
+14m         Normal    Started                  pod/api-5f47c4696b-v2z8m          Started container api
+14m         Normal    SuccessfulDelete         replicaset/api-8546687bff         Deleted pod: api-8546687bff-q4kkq
+14m         Normal    SuccessfulCreate         replicaset/api-5f47c4696b         Created pod: api-5f47c4696b-tr8sg
+14m         Normal    Pulling                  pod/api-5f47c4696b-tr8sg          Pulling image "kennethreitz/httpbin:latest"
+14m         Normal    SuccessfulDelete         replicaset/api-8546687bff         Deleted pod: api-8546687bff-5zks4
+14m         Normal    Killing                  pod/api-8546687bff-q4kkq          Stopping container api
+14m         Normal    Killing                  pod/api-8546687bff-5zks4          Stopping container api
+14m         Normal    Created                  pod/api-5f47c4696b-tr8sg          Created container api
+14m         Normal    Pulled                   pod/api-5f47c4696b-tr8sg          Successfully pulled image "kennethreitz/httpbin:latest" in 760ms (760ms including waiting). Image size: 214174220 bytes.
+14m         Normal    Started                  pod/api-5f47c4696b-tr8sg          Started container api
+3m53s       Normal    SuccessfulDelete         replicaset/api-5f47c4696b         Deleted pod: api-5f47c4696b-tr8sg
+3m53s       Normal    SuccessfulDelete         replicaset/api-5f47c4696b         Deleted pod: api-5f47c4696b-sxqjl
+3m53s       Normal    Killing                  pod/api-5f47c4696b-sxqjl          Stopping container api
+3m53s       Normal    Killing                  pod/api-5f47c4696b-tr8sg          Stopping container api
+3m53s       Normal    ScalingReplicaSet        rollout/api                       Scaled down ReplicaSet api-5f47c4696b (revision 3) from 4 to 2
+3m41s       Warning   FailedGetScale           horizontalpodautoscaler/api-hpa   deployments/scale.apps "api" not found

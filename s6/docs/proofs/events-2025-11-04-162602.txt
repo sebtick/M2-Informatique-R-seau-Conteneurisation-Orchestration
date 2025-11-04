@@ -1,0 +1,2 @@
+LAST SEEN   TYPE      REASON           OBJECT                            MESSAGE
+4m10s       Warning   FailedGetScale   horizontalpodautoscaler/api-hpa   deployments/scale.apps "api" not found

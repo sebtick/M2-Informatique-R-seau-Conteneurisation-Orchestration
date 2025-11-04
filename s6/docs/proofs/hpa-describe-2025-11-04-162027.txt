@@ -1,0 +1,21 @@
+Name:                                                  api-hpa
+Namespace:                                             workshop
+Labels:                                                <none>
+Annotations:                                           <none>
+CreationTimestamp:                                     Tue, 04 Nov 2025 14:08:34 +0100
+Reference:                                             Deployment/api
+Metrics:                                               ( current / target )
+  resource cpu on pods  (as a percentage of request):  1% (1m) / 60%
+Min replicas:                                          2
+Max replicas:                                          6
+Deployment pods:                                       2 current / 2 desired
+Conditions:
+  Type            Status  Reason            Message
+  ----            ------  ------            -------
+  AbleToScale     False   FailedGetScale    the HPA controller was unable to get the target's current scale: deployments/scale.apps "api" not found
+  ScalingActive   True    ValidMetricFound  the HPA was able to successfully calculate a replica count from cpu resource utilization (percentage of request)
+  ScalingLimited  True    TooFewReplicas    the desired replica count is less than the minimum replica count
+Events:
+  Type     Reason          Age                    From                       Message
+  ----     ------          ----                   ----                       -------
+  Warning  FailedGetScale  3m58s (x378 over 98m)  horizontal-pod-autoscaler  deployments/scale.apps "api" not found

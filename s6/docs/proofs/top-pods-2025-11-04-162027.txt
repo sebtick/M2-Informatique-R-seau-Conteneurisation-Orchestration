@@ -1,0 +1,6 @@
+NAME                     CPU(cores)   MEMORY(bytes)   
+api-5f47c4696b-v2z8m     23m          38Mi            
+api-5f47c4696b-xgwk6     24m          37Mi            
+front-5dd7b9d45c-vxmdb   0m           15Mi            
+front-5dd7b9d45c-wvbzw   0m           12Mi            
+postgres-0               12m          39Mi            

@@ -1,0 +1,102 @@
+Name:         api
+Namespace:    workshop
+Labels:       <none>
+Annotations:  rollout.argoproj.io/revision: 3
+API Version:  argoproj.io/v1alpha1
+Kind:         Rollout
+Metadata:
+  Creation Timestamp:  2025-11-04T13:53:44Z
+  Generation:          4
+  Resource Version:    41610
+  UID:                 b8a9bbe2-c538-47ec-aecd-007d21191ce9
+Spec:
+  Replicas:  2
+  Selector:
+    Match Labels:
+      App:  api
+  Strategy:
+    Canary:
+      Steps:
+        Set Weight:  10
+        Pause:
+          Duration:  10
+        Set Weight:  30
+        Pause:
+          Duration:  15
+        Set Weight:  60
+        Pause:
+          Duration:  20
+  Template:
+    Metadata:
+      Annotations:
+        rollouts/version:  v3
+      Labels:
+        App:  api
+    Spec:
+      Containers:
+        Image:  kennethreitz/httpbin:latest
+        Name:   api
+        Ports:
+          Container Port:  80
+          Name:            http
+          Protocol:        TCP
+        Readiness Probe:
+          Http Get:
+            Path:                 /status/200
+            Port:                 http
+          Initial Delay Seconds:  5
+          Period Seconds:         5
+        Resources:
+          Limits:
+            Cpu:     300m
+            Memory:  256Mi
+          Requests:
+            Cpu:     100m
+            Memory:  128Mi
+Status:
+  HPA Replicas:        2
+  Available Replicas:  2
+  Blue Green:
+  Canary:
+  Conditions:
+    Last Transition Time:  2025-11-04T13:56:22Z
+    Last Update Time:      2025-11-04T13:56:22Z
+    Message:               Rollout is paused
+    Reason:                RolloutPaused
+    Status:                False
+    Type:                  Paused
+    Last Transition Time:  2025-11-04T13:56:32Z
+    Last Update Time:      2025-11-04T13:56:32Z
+    Message:               Rollout has minimum availability
+    Reason:                AvailableReason
+    Status:                True
+    Type:                  Available
+    Last Transition Time:  2025-11-04T13:56:32Z
+    Last Update Time:      2025-11-04T13:56:32Z
+    Message:               RolloutCompleted
+    Reason:                RolloutCompleted
+    Status:                True
+    Type:                  Completed
+    Last Transition Time:  2025-11-04T14:06:39Z
+    Last Update Time:      2025-11-04T14:06:39Z
+    Message:               Rollout is healthy
+    Reason:                RolloutHealthy
+    Status:                True
+    Type:                  Healthy
+    Last Transition Time:  2025-11-04T13:56:22Z
+    Last Update Time:      2025-11-04T14:06:39Z
+    Message:               ReplicaSet "api-5f47c4696b" has successfully progressed.
+    Reason:                NewReplicaSetAvailable
+    Status:                True
+    Type:                  Progressing
+  Current Pod Hash:        5f47c4696b
+  Current Step Hash:       7555cbc54d
+  Current Step Index:      6
+  Observed Generation:     4
+  Phase:                   Healthy
+  Ready Replicas:          2
+  Replicas:                2
+  Selector:                app=api
+  Stable RS:               5f47c4696b
+  Updated Replicas:        2
+Events:                    <none>

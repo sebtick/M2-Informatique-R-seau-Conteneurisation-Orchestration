@@ -1,0 +1,69 @@
+apiVersion: v1
+items:
+- apiVersion: jaegertracing.io/v1
+  kind: Jaeger
+  metadata:
+    annotations:
+      kubectl.kubernetes.io/last-applied-configuration: |
+        {"apiVersion":"jaegertracing.io/v1","kind":"Jaeger","metadata":{"annotations":{},"name":"simplest","namespace":"observability"},"spec":{"strategy":"allinone"}}
+    creationTimestamp: "2025-11-05T08:36:43Z"
+    generation: 1
+    labels:
+      jaegertracing.io/operated-by: observability.jaeger-operator
+    name: simplest
+    namespace: observability
+    resourceVersion: "58703"
+    uid: 814b68d1-2ff0-4ebe-8ac1-78e9cb5aeb5f
+  spec:
+    agent:
+      config: {}
+      options: {}
+      resources: {}
+    allInOne:
+      config: {}
+      metricsStorage: {}
+      options: {}
+      resources: {}
+    collector:
+      config: {}
+      kafkaSecretName: ""
+      options: {}
+      resources: {}
+    ingester:
+      config: {}
+      kafkaSecretName: ""
+      options: {}
+      resources: {}
+    ingress:
+      openshift: {}
+      options: {}
+      resources: {}
+    query:
+      metricsStorage: {}
+      options: {}
+      resources: {}
+    resources: {}
+    sampling:
+      options: {}
+    storage:
+      cassandraCreateSchema: {}
+      dependencies:
+        resources: {}
+      elasticsearch:
+        name: elasticsearch
+        storage: {}
+      esIndexCleaner:
+        resources: {}
+      esRollover:
+        resources: {}
+      grpcPlugin: {}
+      options: {}
+    strategy: allinone
+    ui:
+      options: {}
+  status:
+    phase: Failed
+    version: ""
+kind: List
+metadata:
+  resourceVersion: ""

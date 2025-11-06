@@ -1,0 +1,12 @@
+NAME                                                     READY   STATUS    RESTARTS      AGE   IP            NODE                  NOMINATED NODE   READINESS GATES
+alertmanager-monitor-kube-prometheus-st-alertmanager-0   2/2     Running   4 (49m ago)   24h   10.244.0.27   tp-s4-control-plane   <none>           <none>
+hotrod-57df9cb4bd-sdfc8                                  1/1     Running   1 (49m ago)   19h   10.244.0.4    tp-s4-control-plane   <none>           <none>
+jaeger-operator-5ff4dfd659-nt2lt                         2/2     Running   4 (49m ago)   24h   10.244.0.24   tp-s4-control-plane   <none>           <none>
+loki-0                                                   1/1     Running   2 (49m ago)   24h   10.244.0.23   tp-s4-control-plane   <none>           <none>
+loki-promtail-xzjl9                                      1/1     Running   2 (49m ago)   24h   10.244.0.26   tp-s4-control-plane   <none>           <none>
+monitor-grafana-7f655c5d69-7vmcw                         1/1     Running   1 (49m ago)   19h   10.244.0.5    tp-s4-control-plane   <none>           <none>
+monitor-kube-prometheus-st-operator-6cb8b4bf57-hc4rn     1/1     Running   2 (49m ago)   24h   10.244.0.22   tp-s4-control-plane   <none>           <none>
+monitor-kube-state-metrics-8679d5ffc5-pn755              1/1     Running   2 (49m ago)   24h   10.244.0.25   tp-s4-control-plane   <none>           <none>
+monitor-prometheus-node-exporter-n29s8                   1/1     Running   2 (49m ago)   24h   172.18.0.2    tp-s4-control-plane   <none>           <none>
+prometheus-monitor-kube-prometheus-st-prometheus-0       2/2     Running   4 (49m ago)   24h   10.244.0.28   tp-s4-control-plane   <none>           <none>
+simplest-7c64cc9c9b-jfbbw                                1/1     Running   2 (49m ago)   24h   10.244.0.2    tp-s4-control-plane   <none>           <none>

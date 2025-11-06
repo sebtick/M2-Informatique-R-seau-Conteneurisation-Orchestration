@@ -1,0 +1,2 @@
+NAME            CLASS    HOSTS                                                           ADDRESS   PORTS     AGE
+observability   <none>   grafana.local,prometheus.local,alertmanager.local + 1 more...             80, 443   24h

@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: simplest
+  namespace: observability
+  labels: { app: simplest }
+spec:
+  replicas: 1
+  selector: { matchLabels: { app: simplest } }
+  template:
+    metadata: { labels: { app: simplest } }
+    spec:
+      containers:
+      - name: jaeger
+        image: jaegertracing/all-in-one:1.57
+        args:
+          - "--query.base-path=/"
+        ports:
+          - { name: query, containerPort: 16686 }   # UI
+          - { name: otlp-grpc, containerPort: 4317 } # OTLP/gRPC
+          - { name: otlp-http, containerPort: 4318 } # OTLP/HTTP
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simplest-query
+  namespace: observability
+spec:
+  selector: { app: simplest }
+  ports:
+    - name: http
+      port: 16686
+      targetPort: query
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: simplest-otlp
+  namespace: observability
+spec:
+  selector: { app: simplest }
+  ports:
+    - { name: otlp-grpc, port: 4317, targetPort: otlp-grpc }
+    - { name: otlp-http, port: 4318, targetPort: otlp-http }

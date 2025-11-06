@@ -1,0 +1,36 @@
+===== grafana.local =====
+HTTP/2 302 
+date: Thu, 06 Nov 2025 08:59:20 GMT
+content-type: text/html; charset=utf-8
+cache-control: no-store
+location: /login
+x-content-type-options: nosniff
+x-frame-options: deny
+x-xss-protection: 1; mode=block
+strict-transport-security: max-age=31536000; includeSubDomains
+
+===== prometheus.local =====
+HTTP/2 405 
+date: Thu, 06 Nov 2025 08:59:21 GMT
+content-type: text/plain; charset=utf-8
+content-length: 19
+allow: GET, OPTIONS
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000; includeSubDomains
+
+===== alertmanager.local =====
+HTTP/2 405 
+date: Thu, 06 Nov 2025 08:59:21 GMT
+content-type: text/plain; charset=utf-8
+content-length: 19
+allow: GET, OPTIONS
+x-content-type-options: nosniff
+strict-transport-security: max-age=31536000; includeSubDomains
+
+===== jaeger.local =====
+HTTP/2 200 
+date: Thu, 06 Nov 2025 08:59:21 GMT
+content-type: text/html; charset=utf-8
+vary: Accept-Encoding
+strict-transport-security: max-age=31536000; includeSubDomains
+
